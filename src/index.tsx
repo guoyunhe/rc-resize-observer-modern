@@ -1,12 +1,13 @@
+import { warning } from 'rc-util-modern';
+import toArray from 'rc-util-modern/dist/Children/toArray';
 import * as React from 'react';
-import toArray from 'rc-util/lib/Children/toArray';
-import { warning } from 'rc-util/lib/warning';
-import SingleObserver from './SingleObserver';
 import { Collection } from './Collection';
+import SingleObserver from './SingleObserver';
+import './index.less';
+import { _rs } from './utils/observerUtil';
 
 const INTERNAL_PREFIX_KEY = 'rc-observer-key';
 
-import { _rs } from './utils/observerUtil';
 export {
   /** @private Test only for mock trigger resize event */
   _rs,
@@ -38,7 +39,7 @@ function ResizeObserver(props: ResizeObserverProps, ref: React.Ref<HTMLElement>)
     if (childNodes.length > 1) {
       warning(
         false,
-        'Find more than one child node with `children` in ResizeObserver. Please use ResizeObserver.Collection instead.',
+        'Find more than one child node with `children` in ResizeObserver. Please use ResizeObserver.Collection instead.'
       );
     } else if (childNodes.length === 0) {
       warning(false, '`children` of ResizeObserver is empty. Nothing is in observe.');

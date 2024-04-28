@@ -1,5 +1,3 @@
-import ResizeObserver from 'resize-observer-polyfill';
-
 export type ResizeListener = (element: Element) => void;
 
 // =============================== Const ===============================

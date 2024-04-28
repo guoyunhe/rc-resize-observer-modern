@@ -1,5 +1,5 @@
-import findDOMNode from 'rc-util/lib/Dom/findDOMNode';
-import { supportRef, useComposeRef } from 'rc-util/lib/ref';
+import findDOMNode from 'rc-util-modern/dist/Dom/findDOMNode';
+import { supportRef, useComposeRef } from 'rc-util-modern/dist/ref';
 import * as React from 'react';
 import type { ResizeObserverProps } from '..';
 import { CollectionContext } from '../Collection';
